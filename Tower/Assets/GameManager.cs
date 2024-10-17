@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
     public Transform startPoint;
-    public Transform endPoint;
     public Transform[] Path;
 
 
