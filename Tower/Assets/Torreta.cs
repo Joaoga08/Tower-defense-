@@ -15,7 +15,15 @@ public class Torreta : MonoBehaviour
 
     [SerializeField] private LayerMask enemyMask;
 
+    [SerializeField] private GameObject Tiroprefab;
+
+    [SerializeField] private Transform FiringPoint;
+
+    [SerializeField] private float bps = 1f; // bala por segundo 
+
     private Transform target;
+    private float timeUntilFire;
+
 
     private void Update()
     {
@@ -32,6 +40,22 @@ public class Torreta : MonoBehaviour
         {
             target = null;
         }
+
+      else
+        {
+            timeUntilFire += Time.deltaTime;
+            if (timeUntilFire >= 1f / bps) {
+                Shoot();
+            timeUntilFire = 0f;
+            }
+
+
+        }
+
+    }
+
+    private void Shoot()
+    {
 
     }
    
