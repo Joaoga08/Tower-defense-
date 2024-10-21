@@ -15,9 +15,9 @@ public class Torreta : MonoBehaviour
 
     [SerializeField] private LayerMask enemyMask;
 
-    [SerializeField] private GameObject Tiroprefab;
+    [SerializeField] private GameObject bulletPrefab;
 
-    [SerializeField] private Transform FiringPoint;
+    [SerializeField] private Transform firingPoint;
 
     [SerializeField] private float bps = 1f; // bala por segundo 
 
@@ -56,7 +56,9 @@ public class Torreta : MonoBehaviour
 
     private void Shoot()
     {
-
+GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position,Quaternion.identity);
+        bullet bulletScript = bulletObj.GetComponent<bullet>();
+        bulletScript.SetTarget(target);
     }
    
 

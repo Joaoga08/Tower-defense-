@@ -93,6 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7150360488511660132}
+  - component: {fileID: 661004557718313175}
   m_Layer: 0
   m_Name: Torre
   m_TagString: Untagged
@@ -116,3 +117,24 @@ Transform:
   - {fileID: 3369705452875281981}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &661004557718313175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7551038701454374422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d3b86d18fd41b4a99afd04304b322d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TorreRotacaoPonto: {fileID: 0}
+  DanoTorreta: 5
+  RotacaoSpeed: 5
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 0
+  bulletPrefab: {fileID: 0}
+  firingPoint: {fileID: 0}
+  bps: 1

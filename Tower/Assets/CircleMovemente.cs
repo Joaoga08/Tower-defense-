@@ -29,7 +29,7 @@ public class CircleMovemente : MonoBehaviour
             PathIndex++;
             if(PathIndex == GameManager.Instance.Path.Length)
             {
-
+                CirclieSpawn.onEnemyDestroy.Invoke();
                 Destroy(gameObject);
                 return;
             }
