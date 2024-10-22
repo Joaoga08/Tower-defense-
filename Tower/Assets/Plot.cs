@@ -4,15 +4,38 @@ using UnityEngine;
 
 public class Plot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("References")]
+    [SerializeField] private SpriteRenderer sr;
+    [SerializeField] private Color hoverColor;
+
+
+    private GameObject tower;
+    private Color startColor;
+
+
+    private void Start()
     {
-        
+        startColor = sr.color;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnMouseEnter()
     {
-        
+        sr.color = hoverColor;
+    }
+
+    private void OnMouseExit()
+    {
+        sr.color = startColor;
+    }
+
+    private void OnMouseDown()
+    {
+        if (tower != null) return;
+
+       GameObject towerToBuild = BuildManager.instance.GetSelectedTower();
+
+
+       tower = Instantiate(towerToBuild,transform.position, Quaternion.identity);
+
     }
 }
