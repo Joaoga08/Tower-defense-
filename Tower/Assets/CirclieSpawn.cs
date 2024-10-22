@@ -10,10 +10,10 @@ public class CirclieSpawn : MonoBehaviour
     [SerializeField] private GameObject [] spawnPrefab;
     [SerializeField] private int basebola = 8;
     [SerializeField] private float bolasPorSegundo = 0.5f;
-    [SerializeField] private float tempoWaves;
+    [SerializeField] private float tempoWaves = 5f;
     [SerializeField] private float difficultyScalingFactor = 0.75f;
     [Header("Events")]
-    public static UnityEvent onEnemyDestroy;
+    public static UnityEvent onEnemyDestroy = new UnityEvent();
     private int currentWave = 1;
     private float tempoDeSpawn;
 
@@ -23,16 +23,17 @@ public class CirclieSpawn : MonoBehaviour
 
 
 
+    private void Start()
+    {
+
+        StartCoroutine(StartWave());
+    }
     private void Awake()
     {
       onEnemyDestroy.AddListener(EnemyDestroyed);  
     }
 
-    private void Start()
-    {
-    
-        StartWave();
-    }
+  
 
     // Start is called before the first frame update
    
@@ -57,12 +58,25 @@ public class CirclieSpawn : MonoBehaviour
             bolaviva++;
             tempoDeSpawn = 0f;
         }
+        if(bolaviva == 0 && BolaesquerdaSpawn == 0)
+        {
+            EndWave();
+        }
     }
 
-    private void StartWave()
+    private IEnumerator StartWave()
     {
+        yield return new WaitForSeconds(tempoWaves);
         isSpawning = true;
         BolaesquerdaSpawn = BolasPorWave();
+    }
+    private void EndWave()
+    {
+        isSpawning = false;
+        tempoDeSpawn = 0f;
+
+
+        StartCoroutine(StartWave());
     }
 
     private void SpawnBola()

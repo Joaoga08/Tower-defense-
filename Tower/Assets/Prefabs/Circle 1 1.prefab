@@ -130,8 +130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPrefab:
   - {fileID: 5286735064747657665}
-  basebola: 5
-  bolasPorSegundo: 2
+  basebola: 8
+  bolasPorSegundo: 0.5
   tempoWaves: 5
   difficultyScalingFactor: 0.75
 --- !u!114 &7490505055276371168
