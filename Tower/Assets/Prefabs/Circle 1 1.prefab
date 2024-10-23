@@ -132,7 +132,7 @@ MonoBehaviour:
   - {fileID: 5286735064747657665}
   basebola: 8
   bolasPorSegundo: 0.5
-  tempoWaves: 5
+  tempoWaves: 2
   difficultyScalingFactor: 0.75
 --- !u!114 &7490505055276371168
 MonoBehaviour:
@@ -196,3 +196,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 2
+  currencyWorth: 50

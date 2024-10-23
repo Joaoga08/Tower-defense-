@@ -16,6 +16,7 @@ public class Tower
     public Tower(string _name, int _cost, GameObject _prefab)
     {
         Name = _name;
+       
         cost = _cost;
         prefab = _prefab;
     }
