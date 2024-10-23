@@ -32,10 +32,10 @@ public class Plot : MonoBehaviour
     {
         if (tower != null) return;
 
-       GameObject towerToBuild = BuildManager.instance.GetSelectedTower();
+       Tower towerToBuild = BuildManager.instance.GetSelectedTower();
 
 
-       tower = Instantiate(towerToBuild,transform.position, Quaternion.identity);
+       tower = Instantiate(towerToBuild.prefab,transform.position, Quaternion.identity);
 
     }
 }
