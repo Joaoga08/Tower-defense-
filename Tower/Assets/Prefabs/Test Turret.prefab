@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TorreRotacaoPonto: {fileID: 1519337655740450793}
-  DanoTorreta: 5
+  DanoTorreta: 10
   RotacaoSpeed: 200
   enemyMask:
     serializedVersion: 2
@@ -147,7 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4937280375775409401}
   m_Layer: 0
-  m_Name: Torre
+  m_Name: Test Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

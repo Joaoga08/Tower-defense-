@@ -1,25 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Jobs;
 
-public class GameManager : MonoBehaviour
+public class Tower : MonoBehaviour
 {
-
-    public static GameManager Instance;
-    public Transform startPoint;
-    public Transform[] Path;
-
-
-
-
-
-    private void Awake()
-    {
-        Instance = this;
-    }
-
-
     // Start is called before the first frame update
     void Start()
     {
