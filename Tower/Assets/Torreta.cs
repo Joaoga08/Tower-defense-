@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class Torreta : MonoBehaviour
+public class Torreta : MonoBehaviour ,Iatacavel 
 {
-
+    
     [Header("References")]
     [SerializeField] private Transform TorreRotacaoPonto;
     [Header("Atributos")]
@@ -25,6 +25,12 @@ public class Torreta : MonoBehaviour
     private float timeUntilFire;
 
 
+
+   public void Atacar(int dano)
+    {
+     
+
+    }
     private void Update()
     {
         if (target == null)
@@ -56,7 +62,7 @@ public class Torreta : MonoBehaviour
 
     private void Shoot()
     {
-GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position,Quaternion.identity);
+        GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
         bullet bulletScript = bulletObj.GetComponent<bullet>();
         bulletScript.SetTarget(target);
     }
@@ -91,11 +97,6 @@ target = hits[0].transform;
     {
         Handles.color = Color.cyan;
         Handles.DrawWireDisc(transform.position, transform.forward, DanoTorreta);
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
     }
 
    
