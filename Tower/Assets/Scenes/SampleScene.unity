@@ -4710,10 +4710,10 @@ MonoBehaviour:
     cost: 100
     prefab: {fileID: 1748800790013952270, guid: dba2626b1cb240d4d839dd1f5990a27d, type: 3}
   - Name: Test Turret
-    cost: 150
+    cost: 200
     prefab: {fileID: 1748800790013952270, guid: 77c7e348d1ede3a478cb6bdfe5a26440, type: 3}
   - Name: Torre 2
-    cost: 200
+    cost: 250
     prefab: {fileID: 1748800790013952270, guid: bab25f5d7d7d1b34b90dd236042e0b37, type: 3}
 --- !u!4 &656002415
 Transform:

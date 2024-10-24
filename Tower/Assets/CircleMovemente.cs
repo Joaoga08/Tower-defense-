@@ -13,11 +13,13 @@ public class CircleMovemente : MonoBehaviour
     private Transform target;
 
     private int PathIndex = 0;
+    private float baseSpeed;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        baseSpeed = MoveSpeed;
       target =  GameManager.Instance.Path[PathIndex];
     }
 
@@ -47,5 +49,13 @@ public class CircleMovemente : MonoBehaviour
         Vector2 direction = (target.position - transform.position).normalized;
 
         rb.velocity = direction * MoveSpeed;
+    }
+    public void UpdateSpeed(float newSpeed)
+    {
+        MoveSpeed = newSpeed;
+    }
+    public void ResetSpeed()
+    {
+MoveSpeed = baseSpeed;
     }
 }

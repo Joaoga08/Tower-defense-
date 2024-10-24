@@ -25,12 +25,19 @@ public class Torreta : MonoBehaviour ,Iatacavel
     private float timeUntilFire;
 
 
-
-   public void Atacar(int dano)
+    public void Atacar(int dano)
     {
-     
+        if (target != null)
+        {
+            target = transform;
+            
+        }
 
+
+      
+       
     }
+   
     private void Update()
     {
         if (target == null)
