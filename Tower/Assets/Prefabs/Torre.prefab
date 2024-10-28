@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1519337655740450793}
   - component: {fileID: 5566683217440901185}
   - component: {fileID: 3725327358271613806}
+  - component: {fileID: 6086505756376889670}
+  - component: {fileID: 8224445713948875093}
   m_Layer: 0
   m_Name: HeavyGunB
   m_TagString: Untagged
@@ -103,6 +105,48 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
+  bulletPrefab: {fileID: 4106772801128620337, guid: 2829f1ae45080d94b935b08a0cf44ce4, type: 3}
+  firingPoint: {fileID: 4736364110596401362}
+  bps: 1
+--- !u!114 &6086505756376889670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437154643233411580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d3b86d18fd41b4a99afd04304b322d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TorreRotacaoPonto: {fileID: 1519337655740450793}
+  DanoTorreta: 5
+  RotacaoSpeed: 5
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 256
+  bulletPrefab: {fileID: 4106772801128620337, guid: 2829f1ae45080d94b935b08a0cf44ce4, type: 3}
+  firingPoint: {fileID: 4736364110596401362}
+  bps: 1
+--- !u!114 &8224445713948875093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437154643233411580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d3b86d18fd41b4a99afd04304b322d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TorreRotacaoPonto: {fileID: 1519337655740450793}
+  DanoTorreta: 5
+  RotacaoSpeed: 5
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 2048
   bulletPrefab: {fileID: 4106772801128620337, guid: 2829f1ae45080d94b935b08a0cf44ce4, type: 3}
   firingPoint: {fileID: 4736364110596401362}
   bps: 1

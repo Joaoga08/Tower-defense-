@@ -128,6 +128,10 @@ GameObject:
   - component: {fileID: 4736364110596401362}
   - component: {fileID: 7638301483388727906}
   - component: {fileID: 3212950175730841646}
+  - component: {fileID: 6738997508166119928}
+  - component: {fileID: 530460612299534115}
+  - component: {fileID: 764760856051785623}
+  - component: {fileID: 2741053588548007505}
   m_Layer: 0
   m_Name: PlatformB
   m_TagString: Untagged
@@ -219,4 +223,76 @@ MonoBehaviour:
     m_Bits: 64
   aps: 4
   FreezeTime: 1
-  TargetRange: 2
+  TargetRange: 1
+--- !u!114 &6738997508166119928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7998090316593337050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d601594998a174cb24048910a7f599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 256
+  aps: 4
+  FreezeTime: 1
+  TargetRange: 1
+--- !u!114 &530460612299534115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7998090316593337050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d601594998a174cb24048910a7f599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 512
+  aps: 4
+  FreezeTime: 1
+  TargetRange: 1
+--- !u!114 &764760856051785623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7998090316593337050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d601594998a174cb24048910a7f599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  aps: 4
+  FreezeTime: 1
+  TargetRange: 1
+--- !u!114 &2741053588548007505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7998090316593337050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d601594998a174cb24048910a7f599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 2048
+  aps: 4
+  FreezeTime: 1
+  TargetRange: 1
