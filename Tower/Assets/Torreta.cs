@@ -13,7 +13,7 @@ public class Torreta : MonoBehaviour ,Iatacavel
 
     [SerializeField] private float RotacaoSpeed = 5f;
 
-    [SerializeField] private LayerMask enemyMask;
+    [SerializeField] protected LayerMask enemyMask;
 
     [SerializeField] private GameObject bulletPrefab;
 
@@ -21,20 +21,23 @@ public class Torreta : MonoBehaviour ,Iatacavel
 
     [SerializeField] private float bps = 1f; // bala por segundo 
 
-    private Transform target;
-    private float timeUntilFire;
+    public Transform target;
+    public float timeUntilFire;
 
 
-    public void Atacar(int dano)
+    public virtual void Atacar(int dano)
     {
         if (target != null)
         {
-            target = transform;
-            
+          Health healthComponent = target.GetComponent<Health>();
+           
+            if (healthComponent != null)
+            {
+
+                healthComponent.TakeDamage(dano);
+            }
         }
 
-
-      
        
     }
    

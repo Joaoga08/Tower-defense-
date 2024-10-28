@@ -3,23 +3,39 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections;
 using UnityEngine;
+using UnityEditor;
 
 using static UnityEngine.GraphicsBuffer;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
-public class TurretSlomo : MonoBehaviour
+public class TurretSlomo :  Torreta
 
 {
+   
+   
 
-  
-    [SerializeField] protected LayerMask enemyMask;
-    private float timeUntilFire;
     [SerializeField] private float aps = 4f;
 
     [SerializeField] private float FreezeTime = 1f;
     [SerializeField] private float TargetRange;
-    // Start is called before the first frame update
 
+    
+
+    public override void Atacar(int dano)
+    {
+        if (target != null)
+        {
+            Health healthComponent = target.GetComponent<Health>();
+
+            if (healthComponent != null)
+            {
+
+                healthComponent.TakeDamage(dano);
+            }
+        }
+    }
+
+    
     private void Update()
 
     {

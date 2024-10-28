@@ -218,6 +218,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d601594998a174cb24048910a7f599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TorreRotacaoPonto: {fileID: 4736364110596401362}
+  DanoTorreta: 5
+  RotacaoSpeed: 5
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 64
+  bulletPrefab: {fileID: 0}
+  firingPoint: {fileID: 808881428463072611}
+  bps: 1
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
@@ -236,6 +245,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d601594998a174cb24048910a7f599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TorreRotacaoPonto: {fileID: 4736364110596401362}
+  DanoTorreta: 5
+  RotacaoSpeed: 5
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 256
+  bulletPrefab: {fileID: 0}
+  firingPoint: {fileID: 808881428463072611}
+  bps: 1
   enemyMask:
     serializedVersion: 2
     m_Bits: 256
@@ -254,6 +272,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d601594998a174cb24048910a7f599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TorreRotacaoPonto: {fileID: 4736364110596401362}
+  DanoTorreta: 5
+  RotacaoSpeed: 5
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 512
+  bulletPrefab: {fileID: 0}
+  firingPoint: {fileID: 0}
+  bps: 1
   enemyMask:
     serializedVersion: 2
     m_Bits: 512
@@ -272,6 +299,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d601594998a174cb24048910a7f599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TorreRotacaoPonto: {fileID: 0}
+  DanoTorreta: 5
+  RotacaoSpeed: 5
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  bulletPrefab: {fileID: 0}
+  firingPoint: {fileID: 0}
+  bps: 1
   enemyMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -290,6 +326,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d601594998a174cb24048910a7f599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TorreRotacaoPonto: {fileID: 0}
+  DanoTorreta: 5
+  RotacaoSpeed: 5
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 2048
+  bulletPrefab: {fileID: 0}
+  firingPoint: {fileID: 0}
+  bps: 1
   enemyMask:
     serializedVersion: 2
     m_Bits: 2048
