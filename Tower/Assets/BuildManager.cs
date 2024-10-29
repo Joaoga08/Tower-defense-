@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BuildManager : MonoBehaviour
 {
+
     public static BuildManager instance;
 
     
@@ -21,12 +22,14 @@ public class BuildManager : MonoBehaviour
     }
 
     public Tower GetSelectedTower()
+ 
     {
         return towers[SelectedTower];
     }
 
+
     public void SetSelectedTower(int _selectedTower)
     {
-SelectedTower = _selectedTower;
+SelectedTower = _selectedTower; 
     }
 }
