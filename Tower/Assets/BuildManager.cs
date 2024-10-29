@@ -4,33 +4,32 @@ using UnityEngine;
 
 public class BuildManager : MonoBehaviour
 {
-<<<<<<< Updated upstream
-    // Start is called before the first frame update
-    void Start()
-=======
+
     public static BuildManager instance;
 
-    [Header("References")]
     
+
+    [Header("References")]
+    [SerializeField] private GameObject[] towerPrefabs;
     [SerializeField] private Tower[] towers;
+
 
     private int SelectedTower = 0;
 
     private void Awake()
->>>>>>> Stashed changes
     {
-        
+        instance = this;
     }
 
-<<<<<<< Updated upstream
-    // Update is called once per frame
-    void Update()
-    {
-        
-=======
     public Tower GetSelectedTower()
+ 
     {
         return towers[SelectedTower];
->>>>>>> Stashed changes
+    }
+
+
+    public void SetSelectedTower(int _selectedTower)
+    {
+SelectedTower = _selectedTower; 
     }
 }
