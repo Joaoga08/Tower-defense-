@@ -9,7 +9,6 @@ public class Health : MonoBehaviour
 {
     [Header("Atributos")]
     [SerializeField] private int hitPoints = 2;
-    [SerializeField] private int currencyWorth = 50;
 
 
 
@@ -22,7 +21,6 @@ public class Health : MonoBehaviour
         if (hitPoints <= 0)
         {
             CirclieSpawn.onEnemyDestroy.Invoke();
-GameManager.Instance.IncreaseCurrency(currencyWorth);
 Destroy(gameObject);
         }
     }

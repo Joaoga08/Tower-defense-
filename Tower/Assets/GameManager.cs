@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public Transform startPoint;
     public Transform[] Path;
-    public int currency;
+
 
 
 
@@ -18,30 +18,17 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
     }
-    private void Start()
+
+
+    // Start is called before the first frame update
+    void Start()
     {
-         currency = 150;
+        
     }
 
-    public void IncreaseCurrency(int amount)
+    // Update is called once per frame
+    void Update()
     {
-        currency += amount;
+        
     }
-
-
-    public bool SpendCurrency(int amount)
-    {
-        if (amount < currency)
-        {
-            currency -= amount;
-            return true;
-        }
-        else
-        {
-            Debug.Log("Não tem dinheiro");
-            return false;
-        }
-
-    }
-
 }

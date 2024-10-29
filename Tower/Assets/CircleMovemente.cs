@@ -15,11 +15,9 @@ public class CircleMovemente : MonoBehaviour
     private int PathIndex = 0;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
-
       target =  GameManager.Instance.Path[PathIndex];
     }
 
@@ -31,7 +29,7 @@ public class CircleMovemente : MonoBehaviour
             PathIndex++;
             if(PathIndex == GameManager.Instance.Path.Length)
             {
-
+                CirclieSpawn.onEnemyDestroy.Invoke();
                 Destroy(gameObject);
                 return;
             }
@@ -49,6 +47,5 @@ public class CircleMovemente : MonoBehaviour
         Vector2 direction = (target.position - transform.position).normalized;
 
         rb.velocity = direction * MoveSpeed;
-
     }
 }
