@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!29 &1
@@ -30443,3 +30444,5 @@ SceneRoots:
   - {fileID: 1431600766}
   - {fileID: 55563293}
 >>>>>>> parent of f063590 (Merge branch 'main' into BuildManager)
+=======
+>>>>>>> parent of e0c0e7d (toore)

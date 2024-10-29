@@ -15,13 +15,18 @@ public class CircleMovemente : MonoBehaviour
     private int PathIndex = 0;
     private float baseSpeed;
 
+
     // Start is called before the first frame update
     void Start()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         baseSpeed = MoveSpeed;
 >>>>>>> parent of f063590 (Merge branch 'main' into BuildManager)
+=======
+
+>>>>>>> parent of e0c0e7d (toore)
       target =  GameManager.Instance.Path[PathIndex];
     }
 
@@ -33,7 +38,7 @@ public class CircleMovemente : MonoBehaviour
             PathIndex++;
             if(PathIndex == GameManager.Instance.Path.Length)
             {
-                CirclieSpawn.onEnemyDestroy.Invoke();
+
                 Destroy(gameObject);
                 return;
             }
@@ -52,6 +57,7 @@ public class CircleMovemente : MonoBehaviour
 
         rb.velocity = direction * MoveSpeed;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     }
     public void UpdateSpeed(float newSpeed)
@@ -62,5 +68,8 @@ public class CircleMovemente : MonoBehaviour
     {
 MoveSpeed = baseSpeed;
 >>>>>>> parent of f063590 (Merge branch 'main' into BuildManager)
+=======
+
+>>>>>>> parent of e0c0e7d (toore)
     }
 }
