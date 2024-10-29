@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7921609526739051829}
   - component: {fileID: 8115068010655456485}
   - component: {fileID: 2550919480420476377}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: InvisibleEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,4 +177,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 2
-  currencyWorth: 50
