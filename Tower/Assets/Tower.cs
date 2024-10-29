@@ -4,7 +4,10 @@ using UnityEngine;
 using System;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 3a3b5d8 (Merge pull request #1 from Joaoga08/Movimentação)
 [Serializable]
 public class Tower 
 {
@@ -21,7 +24,10 @@ public class Tower
         cost = _cost;
         prefab = _prefab;
     }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> parent of 3a3b5d8 (Merge pull request #1 from Joaoga08/Movimentação)
 }
