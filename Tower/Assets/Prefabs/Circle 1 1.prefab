@@ -11,10 +11,16 @@ GameObject:
   - component: {fileID: 7200405387215860880}
   - component: {fileID: 7216530870410093843}
   - component: {fileID: 383816591874988262}
+<<<<<<< HEAD
   - component: {fileID: 1622486604048128998}
   - component: {fileID: 7490505055276371168}
   - component: {fileID: 5295325890295878677}
   - component: {fileID: -4297702812755729679}
+=======
+  - component: {fileID: 5295325890295878677}
+  - component: {fileID: -4297702812755729679}
+  - component: {fileID: 6726829713858206115}
+>>>>>>> parent of f063590 (Merge branch 'main' into BuildManager)
   m_Layer: 6
   m_Name: Circle 1 1
   m_TagString: Untagged
@@ -116,7 +122,46 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+<<<<<<< HEAD
 --- !u!114 &1622486604048128998
+=======
+--- !u!58 &5295325890295878677
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5286735064747657665}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &-4297702812755729679
+>>>>>>> parent of f063590 (Merge branch 'main' into BuildManager)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,6 +170,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5286735064747657665}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 2bd6227345f6f924db1e54143da86237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -135,6 +181,14 @@ MonoBehaviour:
   tempoWaves: 5
   difficultyScalingFactor: 0.75
 --- !u!114 &7490505055276371168
+=======
+  m_Script: {fileID: 11500000, guid: 2438c57e326d83a44b0182d533ccf829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 2
+  currencyWorth: 50
+--- !u!114 &6726829713858206115
+>>>>>>> parent of f063590 (Merge branch 'main' into BuildManager)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,6 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 383816591874988262}
+<<<<<<< HEAD
   MoveSpeed: 2
 --- !u!58 &5295325890295878677
 CircleCollider2D:
@@ -196,3 +251,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 2
+=======
+  MoveSpeed: 1
+>>>>>>> parent of f063590 (Merge branch 'main' into BuildManager)

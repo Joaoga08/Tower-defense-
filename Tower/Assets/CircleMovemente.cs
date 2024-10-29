@@ -13,11 +13,15 @@ public class CircleMovemente : MonoBehaviour
     private Transform target;
 
     private int PathIndex = 0;
-
+    private float baseSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
+=======
+        baseSpeed = MoveSpeed;
+>>>>>>> parent of f063590 (Merge branch 'main' into BuildManager)
       target =  GameManager.Instance.Path[PathIndex];
     }
 
@@ -47,5 +51,16 @@ public class CircleMovemente : MonoBehaviour
         Vector2 direction = (target.position - transform.position).normalized;
 
         rb.velocity = direction * MoveSpeed;
+<<<<<<< HEAD
+=======
+    }
+    public void UpdateSpeed(float newSpeed)
+    {
+        MoveSpeed = newSpeed;
+    }
+    public void ResetSpeed()
+    {
+MoveSpeed = baseSpeed;
+>>>>>>> parent of f063590 (Merge branch 'main' into BuildManager)
     }
 }
