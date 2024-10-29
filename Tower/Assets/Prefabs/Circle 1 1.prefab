@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 7200405387215860880}
   - component: {fileID: 7216530870410093843}
   - component: {fileID: 383816591874988262}
-  - component: {fileID: 1622486604048128998}
-  - component: {fileID: 7490505055276371168}
-  m_Layer: 0
+
   m_Name: Circle 1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +95,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 5286735064747657665}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -112,9 +110,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1622486604048128998
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,16 +119,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5286735064747657665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd6227345f6f924db1e54143da86237, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPrefab:
-  - {fileID: 5286735064747657665}
-  basebola: 8
-  bolasPorSegundo: 0.5
-  tempoWaves: 5
-  difficultyScalingFactor: 0.75
---- !u!114 &7490505055276371168
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,4 +132,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 383816591874988262}
-  MoveSpeed: 2
