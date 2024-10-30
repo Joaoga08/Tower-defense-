@@ -2,49 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Plot : MonoBehaviour
+public class Plot : MonoBehaviour // Classe Plot: Representa uma área onde torres podem ser construídas no jogo.
+
 {
-    [Header("References")]
-    [SerializeField] private SpriteRenderer sr;
-    [SerializeField] private Color hoverColor;
+    [SerializeField] private SpriteRenderer sr;    // Componente SpriteRenderer usado para mudar a aparência do plot.
 
+    [SerializeField] private Color hoverColor;    // Cor que será aplicada quando o mouse passar sobre o plot.
 
-    private GameObject tower;
-    private Color startColor;
+    private GameObject tower;    // Referência ao objeto da torre construída neste plot.
 
+    private Color startColor;    // Cor inicial do plot.
 
+    // Método chamado ao iniciar o jogo. Inicializa a cor inicial do plot.
     private void Start()
     {
-        startColor = sr.color;
+        startColor = sr.color;// Armazena a cor inicial do SpriteRenderer.
     }
+    private void OnMouseEnter()    // Método chamado quando o mouse entra na área do plot.
 
-    private void OnMouseEnter()
     {
-        sr.color = hoverColor;
+        sr.color = hoverColor; // Muda a cor do plot para a cor de hover.
     }
+    private void OnMouseExit()    // Método chamado quando o mouse sai da área do plot.
 
-    private void OnMouseExit()
     {
-        sr.color = startColor;
+        sr.color = startColor;// Restaura a cor inicial do plot.
     }
+    private void OnMouseDown()    // Método chamado quando o mouse clica no plot.
 
-    private void OnMouseDown()
     {
-        if (tower != null) return;
+        if (tower != null) return;        // Se já houver uma torre construída, não faz nada.
 
-       Tower towerToBuild = BuildManager.instance.GetSelectedTower();
 
-        if (towerToBuild.cost > GameManager.Instance.currency)
+        Tower towerToBuild = BuildManager.instance.GetSelectedTower();        // Obtém a torre selecionada do BuildManager.
+        if (towerToBuild.cost > LevelManager.instance.currency)
         {
-            Debug.Log("Você nao tem dinheiro");
+            Debug.Log("Você é pobre");
             return;
-
         }
+        LevelManager.instance.SpendCurrency(towerToBuild.cost);
+        tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);        // Instancia a torre na posição do plot.
 
-        GameManager.Instance.SpendCurrency(towerToBuild.cost);
-
-
-       tower = Instantiate(towerToBuild.prefab,transform.position, Quaternion.identity);
 
     }
 }
