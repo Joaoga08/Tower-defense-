@@ -1,33 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+
 using System;
+using UnityEngine;
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 3a3b5d8 (Merge pull request #1 from Joaoga08/Movimentação)
 [Serializable]
-public class Tower 
+public class Tower  // Classe Tower: Representa uma torre que pode ser constru�da no jogo.
+
 {
-  public string Name;
+    public string name;     // Nome da torre.
     public int cost;
-    public GameObject prefab;
 
+    public GameObject prefab;    // Prefab da torre, usado para instanciar a torre no jogo.
 
+    public Tower(string _name, int _cost, GameObject _prefab)    // Construtor da classe Tower, que inicializa os atributos da torre.
 
-    public Tower(string _name, int _cost, GameObject _prefab)
     {
-        Name = _name;
-       
-        cost = _cost;
-        prefab = _prefab;
+        name = _name;// Inicializa o nome da torre.
+         cost = _cost; // Inicializa a Moedinha
+        prefab = _prefab; // Inicializa o prefab da torre.
+
     }
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> parent of 3a3b5d8 (Merge pull request #1 from Joaoga08/Movimentação)
 }
