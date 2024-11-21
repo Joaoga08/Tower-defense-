@@ -14,10 +14,10 @@ public class Health : MonoBehaviour // Classe Health: Gerencia os pontos de vida
     {
         hitPoints -= dmg;// Subtrai o dano dos pontos de vida.
 
-  
+
         if (hitPoints <= 0 && !isDestroyed)        // Verifica se os pontos de vida chegaram a zero ou menos e se o objeto não foi destruído.
         {
-           
+
             EnemySpawner.onEnemyDestroy.Invoke();// Notifica o spawner que um inimigo foi destruído.
             LevelManager.instance.IncreaseCurrency(currencyWorth);
             isDestroyed = true;// Marca o objeto como destruído.
