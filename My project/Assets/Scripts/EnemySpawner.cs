@@ -90,7 +90,7 @@ public class EnemySpawner : MonoBehaviour // Classe EnemySpawner: Responsável po
     {
         int index = Random.Range(0, enemyPrefabs.Length); // Seleciona um prefab aleatório de inimigo.
         GameObject prefabToSpawn = enemyPrefabs[index]; // Obtém o prefab escolhido.
-        Instantiate(prefabToSpawn, LevelManager.instance.startPoint.position, Quaternion.identity); // Instancia o inimigo na posição inicial.
+        Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity); // Instancia o inimigo na posição inicial.
     }
     private int EnemiesPerWave()     // Método para calcular o número de inimigos por onda.
 
