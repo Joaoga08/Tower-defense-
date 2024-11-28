@@ -117,6 +117,7 @@ public class LevelManager : MonoBehaviour
 
         gameOverPanel.SetActive(false);
 
+
         Time.timeScale = 1;
 
         isGameOver = false;
