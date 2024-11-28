@@ -22,7 +22,7 @@ public class EnemyMovement : MonoBehaviour // Classe EnemyMovement: Controla o m
 
         rb=GetComponent<Rigidbody2D>();
         baseSpeed = moveSpeed; // Armazena a velocidade base.
-        target = LevelManager.main.path[pathIndex]; // Define o primeiro ponto do caminho como alvo.
+        target = LevelManager.instance.path[pathIndex]; // Define o primeiro ponto do caminho como alvo.
     }
 
     // Método chamado a cada quadro para verificar a distância até o próximo ponto do caminho.
@@ -33,19 +33,16 @@ public class EnemyMovement : MonoBehaviour // Classe EnemyMovement: Controla o m
         {
             pathIndex++; // Avança para o próximo ponto do caminho.
 
-            if (pathIndex == LevelManager.main.path.Length)            // Verifica se o inimigo atingiu o final do caminho.
+            if (pathIndex == LevelManager.instance.path.Length)            // Verifica se o inimigo atingiu o final do caminho.
 
             {
-
-                LevelManager.main.GameOver();
-
                 EnemySpawner.onEnemyDestroy.Invoke(); // Notifica o spawner que o inimigo foi destruído.
                 Destroy(gameObject); // Destrói o objeto do inimigo.
                 return;
             }
             else
             {
-                target = LevelManager.main.path[pathIndex]; // Atualiza o alvo para o próximo ponto do caminho.
+                target = LevelManager.instance.path[pathIndex]; // Atualiza o alvo para o próximo ponto do caminho.
             }
         }
     }
@@ -67,13 +64,5 @@ public class EnemyMovement : MonoBehaviour // Classe EnemyMovement: Controla o m
 
     {
         moveSpeed = baseSpeed; // Restaura a velocidade original.
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("endPoint"))
-        {
-            LevelManager.main.GameOver();
-        }
     }
 }

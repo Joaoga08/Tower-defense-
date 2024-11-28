@@ -11,7 +11,7 @@ public class Menu : MonoBehaviour // Classe Menu responsável por gerenciar a int
     private void OnGUI()     // Método chamado para desenhar a interface gráfica
 
     {
-        currencyUI.text = LevelManager.main.currency.ToString(); // Atualiza o texto da UI com o valor atual da moeda do LevelManager
+        currencyUI.text = LevelManager.instance.currency.ToString(); // Atualiza o texto da UI com o valor atual da moeda do LevelManager
 
     }
     public void SetSelected() // um método criado 

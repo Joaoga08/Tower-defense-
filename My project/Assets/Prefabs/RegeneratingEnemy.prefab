@@ -177,6 +177,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 2
-  currencyWorth: 50
   regenerationRate: 0.5
-  maxHitPoints: 3
+  maxHitPoints: 5
