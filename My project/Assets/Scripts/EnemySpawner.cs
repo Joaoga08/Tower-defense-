@@ -19,9 +19,8 @@ public class EnemySpawner : MonoBehaviour // Classe EnemySpawner: Responsável po
 
     [SerializeField] private float difficultyScalingFactor = 0.75f;    // Fator de escalonamento de dificuldade por onda.
 
-    [SerializeField] private float enemiesPerSecondCap = 15f;    // Limite máximo de inimigos gerados por segundo.
-
-
+    [SerializeField] private float enemiesPerSecondCap = 15f;
+   
     public static UnityEvent onEnemyDestroy = new UnityEvent();    // Evento que é acionado quando um inimigo é destruído.
 
     // Variáveis internas para gerenciar o estado do spawner.
@@ -32,6 +31,8 @@ public class EnemySpawner : MonoBehaviour // Classe EnemySpawner: Responsável po
     private int enemiesLeftToSpawn; // Número de inimigos restantes a serem gerados.
     private float eps; // Inimigos por segundo (enemies per second).
     private bool isSpawning = false; // Indica se os inimigos estão sendo gerados.
+    private int inimigosSaiuDoSpawn; // Contador de inimigos a serem spawnados na onda atual
+    private int inimigoVivo; // Contador de inimigos vivos no momento
     private void Awake()     // Método chamado quando o objeto é inicializado.
 
     {
@@ -63,6 +64,24 @@ public class EnemySpawner : MonoBehaviour // Classe EnemySpawner: Responsável po
             EndWave(); // Termina a onda atual.
             baseEnemies++; // incrementa a quantidade máxima de inimigos 
         }
+
+        if (inimigoVivo <= 0 && inimigosSaiuDoSpawn <= 0)
+
+        {
+
+            TerminarOrda(); // Chama o método para terminar a onda
+
+        }
+
+    }
+
+    private void TerminarOrda()
+    {
+        isSpawning = true; // Para o spawn da onda atual
+        inimigosSaiuDoSpawn = 0; // Reinicia o temporizador
+        inimigoVivo++; // Incrementa a contagem de ondas
+        StartCoroutine(StartWave()); // Inicia uma nova onda
+        AdManager.instance.ShowNextAd(); // Exibe o próximo anúncio
     }
     private void EnemyDestroyed()     // Método chamado quando um inimigo é destruído.
 
