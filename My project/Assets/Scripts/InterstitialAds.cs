@@ -10,7 +10,7 @@ public class InterstitialAds : MonoBehaviour, IUnityAdsInitializationListener
     private bool testMode = true;
     private bool isAdShowing = false;
     private bool isAdLoaded = false;
- 
+
 
     void Start()
     {
@@ -28,10 +28,10 @@ public class InterstitialAds : MonoBehaviour, IUnityAdsInitializationListener
         if (!isAdShowing && isAdLoaded)
         {
             isAdShowing = true;
-            
-             Advertisement.Show(interstitialPlacement);
+
+            Advertisement.Show(interstitialPlacement);
         }
-     
+
     }
 
 
@@ -80,7 +80,7 @@ public class InterstitialAds : MonoBehaviour, IUnityAdsInitializationListener
 
     public void OnInitializationFailed(UnityAdsInitializationError error, string message)
     {
-         throw new System.NotImplementedException();
+        throw new System.NotImplementedException();
     }
 
     public void OnUnityAdsAdLoaded(string placementId)
